@@ -11,6 +11,7 @@ namespace Hello
         static void Main(string[] args)
         {
             Console.WriteLine("poppp");
+            Console.WriteLine("dupa");
 
         }
     }
