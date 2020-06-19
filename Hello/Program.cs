@@ -37,6 +37,7 @@ namespace Hello
                     Console.WriteLine("Niepoprawny wiek");
                 }
 
+
                 Console.ReadKey();
                 Console.Clear();
             }
