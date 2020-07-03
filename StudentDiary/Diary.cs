@@ -8,7 +8,7 @@ namespace StudentDiary
 {
     class Diary
     {
-        List<float> ratings;
+        List<float> ratings = new List<float>() ;
 
 
         public void AddNewRating(float rating)
