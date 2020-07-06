@@ -8,7 +8,17 @@ namespace StudentDiary
 {
     class Diary
     {
-        List<float> ratings = new List<float>() ;
+        List<float> ratings;
+
+        //konstruktor, można utworzyć wpisując "ctor"
+        //inicjalizujemy nowe listy itd w konstruktorze
+        //(wtedy dana lista utworzy się dopiero gdy utworzymy obiekt)
+        // ^ DOBRA PRAKTYKA
+        //należy stosować gdy przekazujemy wartości początkowe/domyślne
+        public Diary()
+        {
+            ratings = new List<float>();
+        }
 
 
         public void AddNewRating(float rating)

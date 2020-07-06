@@ -11,6 +11,7 @@ namespace Hello
     {
         static void Main(string[] args)
         {
+<<<<<<< Updated upstream
             ValueTypes();
 
             for (; ; )
@@ -79,5 +80,38 @@ namespace Hello
             string name = Console.ReadLine();
             Console.WriteLine("Witaj, " + name);
         }
+=======
+            
+
+                Console.Write("Wpisz imie: ");
+                string name = Console.ReadLine();
+                Console.WriteLine("Witaj, " + name);
+
+                Console.Write("Ile masz lat? ");
+                int age;
+                bool tryAge = int.TryParse(Console.ReadLine(), out age);
+
+
+                if (age >= 18)
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Możesz wypić browara");
+                }
+                else if (tryAge)
+                {
+                    Console.WriteLine("Pij mleko");
+                }
+                else
+                {
+                    Console.WriteLine("Niepoprawny wiek");
+                }
+
+                Console.ReadKey();
+                Console.Clear();
+            }
+      
+        
+>>>>>>> Stashed changes
     }
 }
