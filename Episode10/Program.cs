@@ -15,9 +15,10 @@ namespace Episode10
             diary.AddNewRating(5);
 
             Diary diary2 = diary;
-            diary.AddNewRating(9);
-
-
+            diary.AddNewRating(5);
+      
+            //zmienna wskazuje na obiekt!
+            //dlatego w powyższym kodzie modyfukujemy w obu przypadkach ten sam obiekt
         }
     }
 }
