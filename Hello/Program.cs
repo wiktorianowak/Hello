@@ -11,10 +11,8 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-<<<<<<< Updated upstream
-            ValueTypes();
 
-            for (; ; )
+            for (;;)
             {
                 Greeting();
                 CheckAge();
@@ -23,7 +21,10 @@ namespace Hello
 
         }
 
-        private static void ValueTypes() 
+        /// <summary>
+        /// Sprawdzenie typów
+        /// </summary>
+        private static void ValueTypes()
         {
             int maxInt = int.MaxValue;
             int minInt = int.MinValue;
@@ -79,39 +80,29 @@ namespace Hello
             Console.Write("Wpisz imie: ");
             string name = Console.ReadLine();
             Console.WriteLine("Witaj, " + name);
-        }
-=======
             
-
-                Console.Write("Wpisz imie: ");
-                string name = Console.ReadLine();
-                Console.WriteLine("Witaj, " + name);
-
-                Console.Write("Ile masz lat? ");
-                int age;
-                bool tryAge = int.TryParse(Console.ReadLine(), out age);
+            Console.Write("Ile masz lat? ");
+            int age;
+            bool tryAge = int.TryParse(Console.ReadLine(), out age);
 
 
-                if (age >= 18)
-                {
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("Możesz wypić browara");
-                }
-                else if (tryAge)
-                {
-                    Console.WriteLine("Pij mleko");
-                }
-                else
-                {
-                    Console.WriteLine("Niepoprawny wiek");
-                }
-
-                Console.ReadKey();
-                Console.Clear();
+            if (age >= 18)
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Możesz wypić browara");
             }
-      
-        
->>>>>>> Stashed changes
+            else if (tryAge)
+            {
+                Console.WriteLine("Pij mleko");
+            }
+            else
+            {
+                Console.WriteLine("Niepoprawny wiek");
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+        }
     }
 }
