@@ -48,6 +48,8 @@ namespace StudentDiary
 
             Console.WriteLine("Średnia: "  + diary.CalcAvarageRating() + ", maksymalna: " + diary.MaxRating() + ", minimalna: " + diary.MinRating());
             Console.ReadKey();
+
+            Diary diary2 = new Diary();
         }
     }
 }
