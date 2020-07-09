@@ -20,44 +20,26 @@ namespace StudentDiary
             ratings = new List<float>();
         }
 
-
         public void AddNewRating(float rating)
         {
             ratings.Add(rating);
         }
-
-        public float MaxRating()
+        
+        public DiaryStats ComputeStats()
         {
-            return ratings.Max();
-        }
+            DiaryStats stats = new DiaryStats();
 
-        public float MinRating()
-        {
-            return ratings.Min();
-        }
-
-        public float CalcAvarageRating()
-        {
-
-            //float avg;
-            //avg = ratings.Average();
-            //return avg;
-
-            float sum = 0, avg = 0;
-
-            if (ratings.Count > 0)
+            float sum = 0;
+            foreach (var rating in ratings)
             {
-                foreach (var rating in ratings)
-                {
-                    sum += rating;
-                }
-                avg = sum / ratings.Count;
+                sum += rating;
             }
 
-            return avg;
-            
+            stats.avgGrade = sum / ratings.Count;
+            stats.maxGrade = ratings.Max();
+            stats.minGrade = ratings.Min();
+
+            return stats;
         }
-
-
     }
 }

@@ -20,12 +20,19 @@ namespace Episode10
             ratings = new List<float>();
         }
 
-
+        /// <summary>
+        /// Dodawanie nowej oceny do listy
+        /// </summary>
+        /// <param name="rating">nowa ocena</param>
         public void AddNewRating(float rating)
         {
             ratings.Add(rating);
         }
 
+        /// <summary>
+        ///  Wyznaczenie najwyższej oceny
+        /// </summary>
+        /// <returns>Wartość najwyższej oceny</returns>
         public float MaxRating()
         {
             return ratings.Max();
