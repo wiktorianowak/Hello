@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentDiary
+namespace Typy
 {
     class Diary
     {
@@ -12,6 +12,8 @@ namespace StudentDiary
 
         public static float minGrade = 0;
         public static float maxGrade = 10;
+        public static long count = 0;
+        public string name;
 
         //konstruktor, można utworzyć wpisując "ctor"
         //inicjalizujemy nowe listy itd w konstruktorze
@@ -21,11 +23,17 @@ namespace StudentDiary
         public Diary()
         {
             ratings = new List<float>();
+            //zliczanie liczby słowników danej klasy
+            count++;
         }
 
         public void AddNewRating(float rating)
         {
-            ratings.Add(rating);
+            if (rating>=0 && rating<=10)
+            {
+                ratings.Add(rating);
+            }
+            
         }
         
         public DiaryStats ComputeStats()

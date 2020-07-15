@@ -11,8 +11,8 @@ namespace StudentDiary
         static void Main(string[] args)
         {
             //utworzenie nowego obiektu typu Diary dodany przez konstruktor domyślny ()
+            float m = Diary.maxGrade;
             Diary diary = new Diary();
-
 
             //float avg = diary.CalcAvarageRating();
             //float max = diary.MaxRating();
@@ -60,7 +60,12 @@ namespace StudentDiary
 
             DiaryStats stats = diary.ComputeStats();
             DiaryStats stats2 = diary2.ComputeStats();
-            
+
+            int y = 4;
+            int x = y;
+            y += 9;
+            Console.WriteLine("y: " + y + ", x: " + x);
+            Console.ReadKey();
 
         }
     }
