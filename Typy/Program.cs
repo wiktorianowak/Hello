@@ -35,20 +35,73 @@ namespace Typy
             number = 9;
         }
 
+       
+
         static void Main(string[] args)
+        {
+            //PassingByValAndRef();
+
+            //Immutable();
+
+            Arrays();
+
+            Console.ReadKey();
+        }
+         
+        private static void Arrays()
+        {
+            float[] ratings = new float[5];
+
+            AddRatings(ratings);
+
+            foreach (var rating in ratings)
+            {
+                Console.WriteLine(rating);
+            }
+        }
+
+        private static void AddRatings(float[] ratings)
+        {
+            ratings[0] = 4.6f;
+            ratings[1] = 8.5f;
+            ratings[2] = 8.6f;
+            ratings[3] = 9.9f;
+            ratings[4] = 7.7f;
+        }
+
+        private static void PassingByValAndRef()
         {
             Diary d1 = new Diary();
             Diary d2 = d1;
-            
+
             GiveName(ref d2);
 
             Console.WriteLine(d2.name);
-            
+
             int x1;
             IncrementNumber(out x1);
 
             Console.WriteLine(x1);
-            Console.ReadKey();
+
+            string name1 = "Marcin";
+            string name2 = "marcin";
+
+            bool areEqual = name1.Equals(name2, StringComparison.CurrentCulture);
+
+            Console.WriteLine(areEqual);
+        }
+
+        private static void Immutable()
+        {
+            string name = " MMa ";
+            name = name.Trim();
+            Console.WriteLine(name);
+
+            DateTime date = new DateTime(2020, 11, 30);
+            DayOfWeek dayOfWeek = date.DayOfWeek;
+            String dayName = dayOfWeek.ToString();
+            date = date.AddDays(9);
+            Console.WriteLine(dayName + ", " + date);
         }
     }
 }

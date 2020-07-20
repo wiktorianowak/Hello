@@ -13,12 +13,10 @@ namespace Typy
 
     public enum PayrollType
     {
-        /// <summary>
-        /// 
-        /// </summary>
+        //domyślnie pierwszy typ przyjmuje wartość '0', a później domyślnie przjmuje całkowite
         Contractor = 1,
-        Salaries = 2,
-        Executive = 3,
-        Hourly = 4
+        Salaries,
+        Executive,
+        Hourly
     }
 }

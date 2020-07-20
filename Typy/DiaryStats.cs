@@ -4,8 +4,6 @@
     {
         public float avgGrade;
         public float maxGrade;
-        public float minGrade;
-
-        
+        public float minGrade;       
     }
 }
