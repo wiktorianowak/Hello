@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Speech.Synthesis;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,9 +46,23 @@ namespace Typy
 
             Arrays();
 
+            WriteAsByte(43);
+
+            SpeechSynthesizer speech = new SpeechSynthesizer();
+            speech.Speak("Bip bop, przepraszam");
+
             Console.ReadKey();
         }
-         
+
+        private static void WriteAsByte(int value)
+        {
+            byte[] bytes = BitConverter.GetBytes(value);
+            foreach (byte b in bytes)
+            {
+                Console.WriteLine("0x{0:x2}", b);
+            }
+        }
+
         private static void Arrays()
         {
             float[] ratings = new float[5];
@@ -62,11 +77,18 @@ namespace Typy
 
         private static void AddRatings(float[] ratings)
         {
-            ratings[0] = 4.6f;
-            ratings[1] = 8.5f;
-            ratings[2] = 8.6f;
-            ratings[3] = 9.9f;
-            ratings[4] = 7.7f;
+            if (ratings.Length >= 5)
+            {
+                ratings[0] = 4.6f;
+                ratings[1] = 8.5f;
+                ratings[2] = 8.6f;
+                ratings[3] = 9.9f;
+                ratings[4] = 7.7f;
+            }
+            else
+            {
+                Console.WriteLine("niepoprawna długość tablicy");
+            }
         }
 
         private static void PassingByValAndRef()
